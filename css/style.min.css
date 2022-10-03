@@ -6268,3 +6268,9 @@ input.datepicker {
   width: 100%;
   margin-bottom: 15px;
 }
+.customers .statistic-block {
+  display: flex;
+  height: 100%;
+  margin-bottom: unset;
+  align-items: center;
+}
