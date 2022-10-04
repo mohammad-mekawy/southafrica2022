@@ -398,7 +398,7 @@
                   <p class="text-white font-21">20th October - 25th October</p>
                 </div>
                 <button
-                  class="btn btn-tra-grey primary-hover btn-call-form brand-color"
+                  class="btn btn-tra-grey primary-hover btn-call-form2 brand-color"
                 >
                   Enquire Now
                 </button>
@@ -413,7 +413,7 @@
                   <p class="text-white font-21">26th October - 31st October</p>
                 </div>
                 <button
-                  class="btn btn-tra-grey primary-hover btn-call-form brand-color"
+                  class="btn btn-tra-grey primary-hover btn-call-form3 brand-color"
                 >
                   Enquire Now
                 </button>
@@ -718,7 +718,7 @@
 
                 <!-- Button -->
                 <button
-                  class="btn btn-md btn-primary tra-white-hover btn-call-form"
+                  class="btn btn-md btn-primary tra-white-hover btn-call-form2"
                 >
                   Schedule Your Visit
                 </button>
@@ -735,7 +735,7 @@
 
                 <!-- Button -->
                 <button
-                  class="btn btn-md btn-primary tra-white-hover btn-call-form"
+                  class="btn btn-md btn-primary tra-white-hover btn-call-form3"
                 >
                   Schedule Your Visit
                 </button>
@@ -1224,6 +1224,142 @@
         </form>
       </div>
     </div>
+    <!-- quote popup -->
+    <div class="Appointment2 text-center hero-form">
+      <span class="cls_btn">X</span>
+      <div class="info-call">
+        <div>
+          <h3 class="call-heading">Request an Appointment</h3>
+        </div>
+        <form action="form.php" class="row register-form" method="post">
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control phone"
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control phone"
+              type="text"
+              name="message"
+              placeholder="Message"
+            />
+          </div>
+
+          <!-- Form Submit Button -->
+          <div class="col-md-12">
+            <button
+              type="submit"
+              name="Appointment2"
+              class="btn btn-md btn-primary tra-primary-hover submit"
+            >
+              Submit
+            </button>
+          </div>
+
+          <!-- Form Message -->
+          <div class="hero-form-msg text-center">
+            <span class="loading"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- quote popup -->
+    <div class="Appointment3 text-center hero-form">
+      <span class="cls_btn">X</span>
+      <div class="info-call">
+        <div>
+          <h3 class="call-heading">Request an Appointment</h3>
+        </div>
+        <form action="form.php" class="row register-form" method="post">
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control phone"
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <!-- Form Input -->
+          <div class="col-md-12">
+            <input
+              class="form-control phone"
+              type="text"
+              name="message"
+              placeholder="Message"
+            />
+          </div>
+
+          <!-- Form Submit Button -->
+          <div class="col-md-12">
+            <button
+              type="submit"
+              name="Appointment3"
+              class="btn btn-md btn-primary tra-primary-hover submit"
+            >
+              Submit
+            </button>
+          </div>
+
+          <!-- Form Message -->
+          <div class="hero-form-msg text-center">
+            <span class="loading"></span>
+          </div>
+        </form>
+      </div>
+    </div>
     <span class="call-overlay"></span>
     <!-- CTAs widgets end -->
 
@@ -1277,12 +1413,24 @@
           $(".call-overlay").fadeIn();
           $(".Appointment").delay(500).fadeIn();
         });
+        $(".btn-call-form2").click(function () {
+          $(".call-overlay").fadeIn();
+          $(".Appointment2").delay(500).fadeIn();
+        });
+        $(".btn-call-form3").click(function () {
+          $(".call-overlay").fadeIn();
+          $(".Appointment3").delay(500).fadeIn();
+        });
         $(".cls_btn").click(function () {
-          $(".call-back-popup,.Appointment").fadeOut();
+          $(
+            ".call-back-popup,.Appointment,.Appointment2,.Appointment3"
+          ).fadeOut();
           $(".call-overlay").delay(500).fadeOut();
         });
         $(".call-overlay").click(function () {
-          $(".call-back-popup,.Appointment").fadeOut();
+          $(
+            ".call-back-popup,.Appointment,.Appointment2,.Appointment3"
+          ).fadeOut();
           $(".call-overlay").delay(500).fadeOut();
         });
         $(".tabs-menu a").click(function (e) {

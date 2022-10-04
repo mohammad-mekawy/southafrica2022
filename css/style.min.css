@@ -5690,7 +5690,9 @@ nav a#pull {
 .footer-logo {
   width: 45%;
 }
-.Appointment form {
+.Appointment form,
+.Appointment2 form,
+.Appointment3 form {
   box-shadow: none !important;
 }
 .P-resize {
@@ -6145,7 +6147,9 @@ input.datepicker {
     width: 90%;
   }
 }
-.Appointment {
+.Appointment,
+.Appointment2,
+.Appointment3 {
   width: 30vw;
   background: #fff;
   top: 25%;
@@ -6161,7 +6165,9 @@ input.datepicker {
   display: none;
 }
 @media (max-width: 786px) {
-  .Appointment {
+  .Appointment,
+  .Appointment2,
+  .Appointment3 {
     width: 90%;
   }
 }
