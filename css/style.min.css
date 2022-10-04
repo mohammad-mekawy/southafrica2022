@@ -3147,6 +3147,8 @@ h5.wsmwnutitle a:hover {
 }
 #hero-4 {
   background-image: url(../images/used/hero-banner.webp);
+  background-color: #00000052;
+  background-blend-mode: multiply;
   padding-top: 115px;
   padding-bottom: 35px;
   position: relative;
@@ -3165,7 +3167,7 @@ h5.wsmwnutitle a:hover {
   margin: -15px 0 40px;
 }
 .hero-4-txt {
-  padding: 0 10% 0 30px;
+  padding: 0 0 0 30px;
   margin-bottom: 40px;
 }
 .hero-7-txt {
@@ -3987,6 +3989,9 @@ p.hero-info {
 #statistic-2 {
   padding-top: 60px;
   padding-bottom: 20px;
+}
+.icons .statistic-ico img {
+  width: 45%;
 }
 .statistic-block {
   margin-bottom: 40px;
@@ -5672,14 +5677,14 @@ nav a#pull {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .mob-brand-color {
+  /* .mob-brand-color {
     color: #0135a5 !important;
   }
   .mob-black-color {
     color: #000 !important;
-  }
-  .statistic-ico img {
-    width: 45%;
+  } */
+  .icons .statistic-ico img {
+    width: 25%;
   }
 }
 .footer-logo {
@@ -5689,7 +5694,7 @@ nav a#pull {
   box-shadow: none !important;
 }
 .P-resize {
-  width: 80% !important;
+  /* width: 80% !important; */
   padding-top: 10%;
 }
 .RC-btn {
@@ -6041,6 +6046,12 @@ input.datepicker {
   width: 50%;
   margin: auto;
 }
+@media (max-width: 992px) {
+  .pricing-1-table .btn,
+  .pricing-2 .btn {
+    width: 75%;
+  }
+}
 .pricing-1-table .btn:hover,
 .pricing-2 .btn:hover {
   background: #0135a5;
@@ -6273,4 +6284,11 @@ input.datepicker {
   height: 100%;
   margin-bottom: unset;
   align-items: center;
+}
+.owl-stage {
+  display: flex;
+  align-items: center;
+}
+.owl-carousel .owl-item img {
+  width: 100%;
 }
