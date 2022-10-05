@@ -1512,6 +1512,11 @@ ol.num-list li p {
   background-color: transparent;
   border-color: #fff !important;
 }
+.tra-white-hover2:hover {
+  color: #0135a5 !important;
+  background-color: transparent;
+  border-color: #0135a5 !important;
+}
 .scroll .tra-white-hover:hover {
   color: #333 !important;
   background-color: transparent;
