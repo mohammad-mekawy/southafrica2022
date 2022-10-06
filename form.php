@@ -249,7 +249,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['footer'])){
         $formErrors[] = "Add You email please";
     }
     if(empty($formErrors)){
-            $emails = array("i.owis@happenize.com","m.mekkawy@happenize.com","mohammad.mekawy92@gmail.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
+            $emails = array("mohammad.mekawy92@gmail.com");
 			
 			for($i=0;$i<count($emails);$i++){
 				$mail = new PHPMailer;
