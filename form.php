@@ -33,15 +33,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['hero'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -89,15 +89,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Appointment'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -122,7 +122,118 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Appointment'])){
 			}
     }
 }
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Appointment2'])){
+    $name  = filter_var($_POST['name'],FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
+    $phone = filter_var($_POST['phone'],FILTER_SANITIZE_NUMBER_INT);
+    $message  = filter_var($_POST['message'],FILTER_SANITIZE_STRING);
 
+    $formErrors = array();
+	
+    if(empty($name)){
+        $formErrors[] = "Add You name please";
+    }elseif(empty($phone)){
+        $formErrors[] = "Add You phone please";
+    }elseif(empty($email)){
+        $formErrors[] = "Add You email please";
+    }
+    if(empty($formErrors)){
+            $emails = array("i.owis@happenize.com","m.mekkawy@happenize.com","mohammad.mekawy92@gmail.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
+			
+			for($i=0;$i<count($emails);$i++){
+				$mail = new PHPMailer;
+				$mail->CharSet = 'UTF-8';
+				$mail->SMTPDebug = 0;  
+				$mail->isSMTP();                            // Set mailer to use SMTP
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
+				$mail->SMTPAuth = true;                     // Enable SMTP authentication
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
+				$mail->SMTPSecure = 'ssl';                            
+				$mail->Port = 465;  
+				$mail->isHTML(true);  // Set email format to HTML
+
+				$mail->setFrom('consultycs@happenize.net');
+				$mail->addAddress($emails[$i]); 
+
+				//$mail->isHTML(true);  // Set email format to HTML
+
+               $bodyContent = '<h3 style="font-size:18px; margin-bottom:12px;">Name: '. $name .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Email: '. $email .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Phone: '. $phone .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Message: '. $message .'</h3><br>';
+
+               $mail->Subject = 'Consultycs southafrica2022 - Johannesburg';
+               $mail->Body    = $bodyContent;
+            //    $mail->send();
+               if(!$mail->Send()) {
+                    echo "Error while sending Email.";
+                    var_dump($mail);
+                } else {
+                    // echo "Email sent successfully";
+                    header("Location: thanks-Appointment.html");
+                    // exit;
+                }
+                
+			}
+    }
+}
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Appointment3'])){
+    $name  = filter_var($_POST['name'],FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
+    $phone = filter_var($_POST['phone'],FILTER_SANITIZE_NUMBER_INT);
+    $message  = filter_var($_POST['message'],FILTER_SANITIZE_STRING);
+
+    $formErrors = array();
+	
+    if(empty($name)){
+        $formErrors[] = "Add You name please";
+    }elseif(empty($phone)){
+        $formErrors[] = "Add You phone please";
+    }elseif(empty($email)){
+        $formErrors[] = "Add You email please";
+    }
+    if(empty($formErrors)){
+            $emails = array("i.owis@happenize.com","m.mekkawy@happenize.com","mohammad.mekawy92@gmail.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
+			
+			for($i=0;$i<count($emails);$i++){
+				$mail = new PHPMailer;
+				$mail->CharSet = 'UTF-8';
+				$mail->SMTPDebug = 0;  
+				$mail->isSMTP();                            // Set mailer to use SMTP
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
+				$mail->SMTPAuth = true;                     // Enable SMTP authentication
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
+				$mail->SMTPSecure = 'ssl';                            
+				$mail->Port = 465;  
+				$mail->isHTML(true);  // Set email format to HTML
+
+				$mail->setFrom('consultycs@happenize.net');
+				$mail->addAddress($emails[$i]); 
+
+				//$mail->isHTML(true);  // Set email format to HTML
+
+               $bodyContent = '<h3 style="font-size:18px; margin-bottom:12px;">Name: '. $name .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Email: '. $email .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Phone: '. $phone .'</h3><br>';
+               $bodyContent .= '<h3 style="font-size:18px; margin-bottom:12px;">Message: '. $message .'</h3><br>';
+
+               $mail->Subject = 'Consultycs southafrica2022 - Cape Town';
+               $mail->Body    = $bodyContent;
+            //    $mail->send();
+               if(!$mail->Send()) {
+                    echo "Error while sending Email.";
+                    var_dump($mail);
+                } else {
+                    // echo "Email sent successfully";
+                    header("Location: thanks-Appointment.html");
+                    // exit;
+                }
+                
+			}
+    }
+}
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['footer'])){
     $name  = filter_var($_POST['name'],FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
@@ -138,22 +249,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['footer'])){
         $formErrors[] = "Add You email please";
     }
     if(empty($formErrors)){
-            $emails = array("mohammad.mekawy92@gmail.com");
+            $emails = array("i.owis@happenize.com","m.mekkawy@happenize.com","mohammad.mekawy92@gmail.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
 			
 			for($i=0;$i<count($emails);$i++){
 				$mail = new PHPMailer;
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -194,15 +305,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendemail3'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -240,15 +351,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendemailCallNow'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -292,15 +403,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendemailCallLater'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -344,15 +455,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendemailLeaveMessage']
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
@@ -392,15 +503,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendemailQuickCall'])){
 				$mail->CharSet = 'UTF-8';
 				$mail->SMTPDebug = 0;  
 				$mail->isSMTP();                            // Set mailer to use SMTP
-				$mail->Host = 'consultycs.com';             // Specify main and backup SMTP servers
+				$mail->Host = 'happenize.net';           // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                     // Enable SMTP authentication
-				$mail->Username = 'lp@consultycs.com';          // SMTP username
-				$mail->Password = '(U*K]Ju=cill'; // SMTP password
+				$mail->Username = 'consultycs@happenize.net';          // SMTP username
+				$mail->Password = 'wR^(+#ddW3}P'; // SMTP password
 				$mail->SMTPSecure = 'ssl';                            
 				$mail->Port = 465;  
 				$mail->isHTML(true);  // Set email format to HTML
 
-				$mail->setFrom('lp@consultycs.com');
+				$mail->setFrom('consultycs@happenize.net');
 				$mail->addAddress($emails[$i]); 
 
 				//$mail->isHTML(true);  // Set email format to HTML
