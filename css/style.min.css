@@ -6315,3 +6315,10 @@ input.datepicker {
 .font-20 {
   font-size: 20px !important;
 }
+.font-14 {
+  font-size: 14px !important;
+}
+.team-btn {
+  font-size: 16px !important;
+  padding: 10px 18px !important;
+}
