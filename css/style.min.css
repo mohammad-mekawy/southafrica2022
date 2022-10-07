@@ -6327,3 +6327,6 @@ input.datepicker {
   width: 60px;
   margin-bottom: 20px;
 }
+.hero-container {
+  max-width: 1300px;
+}
