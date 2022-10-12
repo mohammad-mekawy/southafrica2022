@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['hero'])){
         $formErrors[] = "Add You email please";
     }
     if(empty($formErrors)){
-            $emails = array("i.owis@happenize.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
+            $emails = array("m.mekkawy@happenize.com","i.owis@happenize.com","info@consultycs.com",  "gmarwadi@consultycs.com", "trishna@happenize.com", "desiree@happenize.com","production@happenize.com","javeed.ameen@consultycs.com");
 			
 			for($i=0;$i<count($emails);$i++){
 				$mail = new PHPMailer;
